@@ -1,0 +1,20 @@
+# Netlify redirect rules for SEO testing
+
+# Simple redirects
+/redirect-301          /redirect-destination.html    301
+/redirect-302          /redirect-destination.html    302
+
+# Redirect chain (3 hops)
+/chain-step-1          /chain-step-2                 301
+/chain-step-2          /chain-step-3                 301
+/chain-step-3          /redirect-destination.html    301
+
+# Redirect to 404 (redirects to a non-existent page)
+/redirect-to-404       /this-page-really-does-not-exist.html  301
+
+# Trailing slash handling (for consistency testing)
+/trailing-slash        /trailing-slash/               301
+/trailing-slash/       /url_with_underscores.html     200
+
+# Soft 404 — returns 200 for a non-existent path (rewrite, not redirect)
+/fake-page-that-looks-like-404  /404.html  200

@@ -1,0 +1,25 @@
+# Intentionally broken robots.txt for testing
+
+# Missing User-agent for first rule (syntax error)
+Disallow: /secret-admin/
+
+# Correct User-agent
+User-agent: Googlebot
+Disallow: /noindex-page.html
+Disallow: /thin-content.html
+Disallow: /lorem-ipsum.html
+disallow: /broken-links.html
+
+# Suspicious rules that block content
+User-agent: *
+Disallow: /level1/
+Disallow: /images/
+Allow: /
+
+# Invalid directives (syntax errors)
+Crawl-delay: 10
+Noindex: /search-results.html
+Priority: high
+
+# Sitemap with wrong URL format
+Sitemap: http://seo-test-site.netlify.app/sitemap.xml

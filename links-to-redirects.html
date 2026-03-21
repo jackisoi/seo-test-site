@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Links Pointing To Redirects</title>
+    <meta name="description" content="This page has internal links that point to redirecting URLs.">
+    <link rel="canonical" href="https://seo-test-site.netlify.app/links-to-redirects.html">
+</head>
+<body>
+    <h1>Links To Redirects</h1>
+    <p>These internal links point to URLs that redirect instead of linking directly to the final destination:</p>
+    <ul>
+        <li><a href="/redirect-301">Link to 301 redirect</a> — should link directly to /redirect-destination.html</li>
+        <li><a href="/redirect-302">Link to 302 redirect</a> — should link directly to /redirect-destination.html</li>
+        <li><a href="/chain-step-1">Link to redirect chain</a> — goes through multiple redirects</li>
+    </ul>
+    <p>Internal links should always point to the final destination URL, not to redirecting URLs.</p>
+    <p><a href="/">Back to homepage</a></p>
+</body>
+</html>

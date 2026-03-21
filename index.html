@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Test Site - Intentionally Broken for Testing</title>
+    <meta name="description" content="A test website intentionally filled with SEO issues for testing SEO audit tools. Every page has deliberate problems.">
+    <link rel="canonical" href="https://seo-test-site.netlify.app/">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        h1 { color: #333; }
+        .section { background: white; padding: 20px; margin: 15px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .section h2 { color: #c0392b; margin-top: 0; }
+        a { color: #2980b9; }
+        ul { line-height: 2; }
+        .note { background: #fff3cd; padding: 10px; border-radius: 4px; margin-bottom: 10px; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <h1>SEO Test Site</h1>
+    <p>This site is intentionally filled with SEO issues for testing purposes. Each page demonstrates specific problems that an SEO audit tool should detect.</p>
+
+    <div class="section">
+        <h2>Title &amp; Description Issues</h2>
+        <ul>
+            <li><a href="/missing-title.html">Missing Title</a> — No title tag at all</li>
+            <li><a href="/title-too-short.html">Title Too Short</a> — Title under 30 characters</li>
+            <li><a href="/title-too-long.html">Title Too Long</a> — Title over 60 characters</li>
+            <li><a href="/duplicate-title-1.html">Duplicate Title Page 1</a> — Same title as page 2</li>
+            <li><a href="/duplicate-title-2.html">Duplicate Title Page 2</a> — Same title as page 1</li>
+            <li><a href="/missing-description.html">Missing Description</a> — No meta description</li>
+            <li><a href="/description-too-short.html">Description Too Short</a> — Under 70 characters</li>
+            <li><a href="/description-too-long.html">Description Too Long</a> — Over 160 characters</li>
+            <li><a href="/duplicate-desc-1.html">Duplicate Description 1</a> — Same description as page 2</li>
+            <li><a href="/duplicate-desc-2.html">Duplicate Description 2</a> — Same description as page 1</li>
+            <li><a href="/multiple-titles.html">Multiple Title Tags</a> — Two title tags</li>
+            <li><a href="/multiple-descriptions.html">Multiple Description Tags</a> — Two meta descriptions</li>
+            <li><a href="/keyword-stuffing.html">Keyword Stuffing</a> — Stuffed title, H1, description, and content</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>H1 Issues</h2>
+        <ul>
+            <li><a href="/missing-h1.html">Missing H1</a> — No H1 tag on page</li>
+            <li><a href="/multiple-h1.html">Multiple H1 Tags</a> — Two H1 tags</li>
+            <li><a href="/empty-h1.html">Empty H1</a> — H1 tag with no text</li>
+            <li><a href="/duplicate-h1-1.html">Duplicate H1 Page 1</a> — Same H1 as page 2</li>
+            <li><a href="/duplicate-h1-2.html">Duplicate H1 Page 2</a> — Same H1 as page 1</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Canonical Issues</h2>
+        <ul>
+            <li><a href="/missing-canonical.html">Missing Canonical</a> — No canonical tag</li>
+            <li><a href="/wrong-canonical.html">Wrong Canonical</a> — Points to a different page</li>
+            <li><a href="/multiple-canonicals.html">Multiple Canonicals</a> — Two canonical tags</li>
+            <li><a href="/canonical-in-body.html">Canonical in Body</a> — Canonical tag outside head</li>
+            <li><a href="/canonical-to-redirect.html">Canonical to Redirect</a> — Canonical points to redirecting URL</li>
+            <li><a href="/canonical-to-broken.html">Canonical to Broken</a> — Canonical points to 404 page</li>
+            <li><a href="/recursive-canonical.html">Recursive Canonical</a> — Two pages point canonical to each other</li>
+            <li><a href="/recursive-canonical-2.html">Recursive Canonical 2</a> — Partner of recursive canonical</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Redirect Issues</h2>
+        <div class="note">These use Netlify _redirects file for real HTTP status codes</div>
+        <ul>
+            <li><a href="/redirect-301">301 Redirect</a> — Permanent redirect to /redirect-destination.html</li>
+            <li><a href="/redirect-302">302 Redirect</a> — Temporary redirect to /redirect-destination.html</li>
+            <li><a href="/chain-step-1">Redirect Chain</a> — step-1 → step-2 → step-3 → destination</li>
+            <li><a href="/redirect-to-404">Redirect to 404</a> — Redirects to a page that doesn't exist</li>
+            <li><a href="/meta-refresh.html">Meta Refresh Redirect</a> — Uses meta refresh tag</li>
+            <li><a href="/redirect-destination.html">Redirect Destination</a> — Target of redirects</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Broken Links &amp; Resources</h2>
+        <ul>
+            <li><a href="/broken-links.html">Broken Links Page</a> — Links to non-existent pages</li>
+            <li><a href="/broken-images.html">Broken Images Page</a> — References non-existent images</li>
+            <li><a href="/broken-resources.html">Broken Resources Page</a> — Links to missing CSS/JS</li>
+            <li><a href="/page-does-not-exist.html">Direct 404 Link</a> — This page doesn't exist</li>
+            <li><a href="/another-missing-page.html">Another 404 Link</a> — Also doesn't exist</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Image Issues</h2>
+        <ul>
+            <li><a href="/images-missing-alt.html">Missing ALT Text</a> — Images without alt attributes</li>
+            <li><a href="/images-long-alt.html">ALT Too Long</a> — Alt text over 150 characters</li>
+            <li><a href="/images-missing-dimensions.html">Missing Dimensions</a> — Images without width/height</li>
+            <li><a href="/image-links-no-alt.html">Image Links Missing ALT</a> — Linked images without alt text</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>HTML &amp; Content Issues</h2>
+        <ul>
+            <li><a href="/lorem-ipsum.html">Lorem Ipsum Content</a> — Page with placeholder text</li>
+            <li><a href="/flash-page.html">Flash Content</a> — Page with Flash embed</li>
+            <li><a href="/frames-page.html">Frames Page</a> — Page using iframes/framesets</li>
+            <li><a href="/no-doctype.html">No Doctype</a> — Missing DOCTYPE declaration</li>
+            <li><a href="/no-encoding.html">No Encoding</a> — Missing charset meta tag</li>
+            <li><a href="/deprecated-tags.html">Deprecated HTML</a> — Uses deprecated HTML tags</li>
+            <li><a href="/meta-in-body.html">Meta Tags in Body</a> — Meta tags placed in body instead of head</li>
+            <li><a href="/duplicate-meta-tags.html">Duplicate Meta Tags</a> — Same meta tag repeated</li>
+            <li><a href="/low-content.html">Low Content Rate</a> — Very little text, lots of HTML</li>
+            <li><a href="/thin-content.html">Thin Content</a> — Very short page content</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>URL Issues</h2>
+        <ul>
+            <li><a href="/URL-With-Uppercase.html">Uppercase URL</a> — URL contains uppercase letters</li>
+            <li><a href="/url with spaces.html">Spaces in URL</a> — URL contains spaces</li>
+            <li><a href="/url_with_underscores.html">Underscores in URL</a> — URL uses underscores instead of hyphens</li>
+            <li><a href="/url---multiple-hyphens.html">Multiple Hyphens</a> — URL has consecutive hyphens</li>
+            <li><a href="/url?param=value&other=123">Dynamic URL</a> — URL with query parameters</li>
+            <li><a href="/this-is-a-very-long-url-that-exceeds-the-recommended-length-for-seo-friendly-urls-and-should-be-flagged.html">Very Long URL</a> — Exceeds recommended length</li>
+            <li><a href="/trailing-slash">No Trailing Slash</a> — Inconsistent trailing slash</li>
+            <li><a href="/trailing-slash/">With Trailing Slash</a> — Inconsistent trailing slash</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Indexability Issues</h2>
+        <ul>
+            <li><a href="/noindex-page.html">Noindex Page</a> — Has noindex meta tag</li>
+            <li><a href="/nofollow-page.html">Nofollow Page</a> — Has nofollow meta tag</li>
+            <li><a href="/noindex-nofollow.html">Noindex + Nofollow</a> — Both noindex and nofollow</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Link Issues</h2>
+        <ul>
+            <li><a href="/excessive-links.html">Excessive Outgoing Links</a> — Page with 200+ links</li>
+            <li><a href="/missing-anchor-text.html">Missing Anchor Text</a> — Links with no text</li>
+            <li><a href="/links-to-redirects.html">Links to Redirects</a> — Internal links pointing to redirecting URLs</li>
+            <li><a href="http://seo-test-site.netlify.app/http-link.html">HTTP Link</a> — Link using HTTP instead of HTTPS</li>
+            <li><a href="/non-canonical-homepage-link.html">Non-Canonical Homepage Links</a> — Links to homepage with wrong format</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Deep Pages (Click Depth)</h2>
+        <ul>
+            <li><a href="/level1/page.html">Level 1</a> — Links to level 2, which links to level 3...</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Search Results Page</h2>
+        <ul>
+            <li><a href="/search-results.html">Search Results</a> — Should be noindexed but isn't</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Non-Canonical Homepage Links</h2>
+        <p>These link to the homepage in non-canonical ways:</p>
+        <ul>
+            <li><a href="http://seo-test-site.netlify.app">HTTP homepage</a></li>
+            <li><a href="https://seo-test-site.netlify.app">Without trailing slash</a></li>
+        </ul>
+    </div>
+</body>
+</html>

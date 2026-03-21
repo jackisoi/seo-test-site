@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page With Frames</title>
+    <meta name="description" content="This page uses framesets and iframes.">
+    <link rel="canonical" href="https://seo-test-site.netlify.app/frames-page.html">
+</head>
+<frameset cols="25%,75%">
+    <frame src="/missing-h1.html" name="menu">
+    <frame src="/missing-title.html" name="content">
+    <noframes>
+        <body>
+            <h1>Frames Page</h1>
+            <p>This page uses HTML framesets which are deprecated and harmful for SEO. Search engines have difficulty indexing content within frames.</p>
+            <p><a href="/">Back to homepage</a></p>
+        </body>
+    </noframes>
+</frameset>
+</html>
