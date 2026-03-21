@@ -2,49 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- Valid pages -->
     <url>
-        <loc>https://seo-test-site.netlify.app/</loc>
+        <loc>https://nimble-monstera-795cd4.netlify.app/</loc>
         <lastmod>2026-03-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://seo-test-site.netlify.app/missing-title.html</loc>
+        <loc>https://nimble-monstera-795cd4.netlify.app/missing-title.html</loc>
         <lastmod>2026-03-20</lastmod>
     </url>
     <url>
-        <loc>https://seo-test-site.netlify.app/broken-links.html</loc>
+        <loc>https://nimble-monstera-795cd4.netlify.app/broken-links.html</loc>
         <lastmod>2026-03-20</lastmod>
     </url>
 
     <!-- URLs that don't exist (sitemap_urls_not_in_crawl / sitemap_urls_with_errors) -->
     <url>
-        <loc>https://seo-test-site.netlify.app/deleted-page-from-sitemap.html</loc>
+        <loc>https://nimble-monstera-795cd4.netlify.app/deleted-page-from-sitemap.html</loc>
         <lastmod>2026-01-15</lastmod>
     </url>
     <url>
-        <loc>https://seo-test-site.netlify.app/old-product-page.html</loc>
+        <loc>https://nimble-monstera-795cd4.netlify.app/old-product-page.html</loc>
         <lastmod>2025-12-01</lastmod>
     </url>
     <url>
-        <loc>https://seo-test-site.netlify.app/removed-blog-post.html</loc>
+        <loc>https://nimble-monstera-795cd4.netlify.app/removed-blog-post.html</loc>
         <lastmod>2025-11-10</lastmod>
     </url>
 
     <!-- URL that redirects (sitemap_redirecting_urls) -->
     <url>
-        <loc>https://seo-test-site.netlify.app/redirect-301</loc>
+        <loc>https://nimble-monstera-795cd4.netlify.app/redirect-301</loc>
         <lastmod>2026-03-20</lastmod>
     </url>
 
     <!-- URL with wrong format — HTTP instead of HTTPS (sitemap_url_format_mismatch) -->
     <url>
-        <loc>http://seo-test-site.netlify.app/duplicate-title-1.html</loc>
+        <loc>http://nimble-monstera-795cd4.netlify.app/duplicate-title-1.html</loc>
         <lastmod>2026-03-20</lastmod>
     </url>
 
     <!-- Homepage with non-canonical URL (sitemap_homepage_not_canonical) -->
     <url>
-        <loc>http://seo-test-site.netlify.app</loc>
+        <loc>http://nimble-monstera-795cd4.netlify.app</loc>
         <lastmod>2026-03-20</lastmod>
     </url>
 

@@ -22,4 +22,4 @@ Noindex: /search-results.html
 Priority: high
 
 # Sitemap with wrong URL format
-Sitemap: http://seo-test-site.netlify.app/sitemap.xml
+Sitemap: http://nimble-monstera-795cd4.netlify.app/sitemap.xml
