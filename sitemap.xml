@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- Valid pages -->
+
+    <!-- ═══ VALID PAGES (existing structure checks) ═══ -->
     <url>
         <loc>https://nimble-monstera-795cd4.netlify.app/</loc>
-        <lastmod>2026-03-20</lastmod>
+        <lastmod>2026-04-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -16,7 +17,133 @@
         <lastmod>2026-03-20</lastmod>
     </url>
 
-    <!-- URLs that don't exist (sitemap_urls_not_in_crawl / sitemap_urls_with_errors) -->
+    <!-- ═══ SCHEMA PAGES — CLEAN HIERARCHY ═══ -->
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/articles/</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/articles/category-a/</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/articles/category-a/article-1.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/articles/category-a/article-2.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/articles/category-b/</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/products/</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/products/category-x/</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/products/category-x/product-1.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/products/category-x/product-2.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/about/</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/contact/</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+
+    <!-- ═══ SCHEMA PAGES — BROKEN (intentional issues) ═══ -->
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/articles/category-a/article-1-broken.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/articles/category-a/article-2-broken.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/products/category-x/product-1-broken.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/products/category-x/product-2-broken.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/about-broken/</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/contact-broken/</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+
+    <!-- ═══ SCHEMA TEST — ISOLATED ISSUES ═══ -->
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/schema-test/wrong-type.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/schema-test/missing-required.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/schema-test/org-on-subpage.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/schema-test/search-no-form.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/schema-test/duplicate-schemas.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/schema-test/broken-id.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/schema-test/faq-swapped.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/schema-test/faq-html.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/schema-test/relative-urls.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+
+    <!-- ═══ SCHEMA TEST — COMBOS ═══ -->
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/schema-test/combo-critical.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/schema-test/combo-minor.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/schema-test/combo-mixed.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+
+    <!-- ═══ INTENTIONAL ERRORS ═══ -->
+
+    <!-- BUG: Non-existent URLs (sitemap_urls_not_in_crawl + sitemap_urls_with_errors) -->
     <url>
         <loc>https://nimble-monstera-795cd4.netlify.app/deleted-page-from-sitemap.html</loc>
         <lastmod>2026-01-15</lastmod>
@@ -29,25 +156,54 @@
         <loc>https://nimble-monstera-795cd4.netlify.app/removed-blog-post.html</loc>
         <lastmod>2025-11-10</lastmod>
     </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/articles/category-a/article-3.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/products/category-x/product-99.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
 
-    <!-- URL that redirects (sitemap_redirecting_urls) -->
+    <!-- BUG: Redirecting URL in sitemap (sitemap_redirecting_urls) -->
     <url>
         <loc>https://nimble-monstera-795cd4.netlify.app/redirect-301</loc>
         <lastmod>2026-03-20</lastmod>
     </url>
 
-    <!-- URL with wrong format — HTTP instead of HTTPS (sitemap_url_format_mismatch) -->
+    <!-- BUG: HTTP instead of HTTPS (sitemap_url_format_mismatch) -->
     <url>
         <loc>http://nimble-monstera-795cd4.netlify.app/duplicate-title-1.html</loc>
         <lastmod>2026-03-20</lastmod>
     </url>
+    <url>
+        <loc>http://nimble-monstera-795cd4.netlify.app/articles/category-a/article-1.html</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
 
-    <!-- Homepage with non-canonical URL (sitemap_homepage_not_canonical) -->
+    <!-- BUG: Homepage with non-canonical URL (sitemap_homepage_not_canonical) -->
     <url>
         <loc>http://nimble-monstera-795cd4.netlify.app</loc>
         <lastmod>2026-03-20</lastmod>
     </url>
 
+    <!-- BUG: Noindex page in sitemap (should not be listed) -->
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/noindex-page.html</loc>
+        <lastmod>2026-03-20</lastmod>
+    </url>
+
+    <!-- BUG: Trailing slash inconsistency — some with, some without -->
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/about</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/contact</loc>
+        <lastmod>2026-04-02</lastmod>
+    </url>
+
     <!-- Intentionally missing many crawlable pages (crawled_pages_not_in_sitemap) -->
-    <!-- Only 3 real pages listed above, but site has 50+ pages -->
+    <!-- ~50+ existing pages NOT listed here -->
+
 </urlset>
