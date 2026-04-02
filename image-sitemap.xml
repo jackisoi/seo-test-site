@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- ═══ VALID ENTRIES — real images on real pages ═══ -->
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/</loc>
+        <image:image>
+            <image:loc>https://nimble-monstera-795cd4.netlify.app/images/banner.png</image:loc>
+            <image:title>Homepage Banner</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/about/</loc>
+        <image:image>
+            <image:loc>https://nimble-monstera-795cd4.netlify.app/images/photo1.jpg</image:loc>
+            <image:title>About Photo 1</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nimble-monstera-795cd4.netlify.app/images/photo2.jpg</image:loc>
+            <image:title>About Photo 2</image:title>
+        </image:image>
+    </url>
+
+    <!-- ═══ ERROR: image URLs not in crawl (triggers image_sitemap_urls_not_in_crawl) ═══ -->
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/products/</loc>
+        <image:image>
+            <image:loc>https://nimble-monstera-795cd4.netlify.app/images/product-hero-deleted.jpg</image:loc>
+            <image:title>Deleted Product Image</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nimble-monstera-795cd4.netlify.app/images/old-catalog-2024.png</image:loc>
+            <image:title>Old Catalog Image</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/contact/</loc>
+        <image:image>
+            <image:loc>https://nimble-monstera-795cd4.netlify.app/images/team-photo-v1.jpg</image:loc>
+            <image:title>Outdated Team Photo</image:title>
+        </image:image>
+    </url>
+
+    <!-- ═══ ERROR: missing image:loc (triggers image_sitemap_invalid_xml) ═══ -->
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/articles/category-a/</loc>
+        <image:image>
+            <image:title>Article image with no loc element</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/articles/category-b/</loc>
+        <image:image>
+            <!-- loc intentionally missing -->
+            <image:caption>This entry has caption but no loc</image:caption>
+        </image:image>
+    </url>
+
+</urlset>
