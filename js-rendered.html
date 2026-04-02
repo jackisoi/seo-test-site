@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title, description, canonical, and schema are ALL injected by JavaScript -->
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        // Simulate a JS-heavy SPA that renders everything client-side
+        // Without JS rendering, this page is completely empty
+
+        // Set title
+        document.title = "JS-Rendered Page - SEO Test Site";
+
+        // Add meta description
+        var meta = document.createElement('meta');
+        meta.name = 'description';
+        meta.content = 'This page is entirely rendered by JavaScript. Without JS execution, search engines see an empty page with no content, no title, no schema.';
+        document.head.appendChild(meta);
+
+        // Add canonical
+        var canonical = document.createElement('link');
+        canonical.rel = 'canonical';
+        canonical.href = 'https://nimble-monstera-795cd4.netlify.app/js-rendered.html';
+        document.head.appendChild(canonical);
+
+        // Add JSON-LD schema via JS
+        var schema = document.createElement('script');
+        schema.type = 'application/ld+json';
+        schema.textContent = JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Article",
+                    "@id": "https://nimble-monstera-795cd4.netlify.app/js-rendered.html#article",
+                    "headline": "Why Server-Side Rendering Matters for SEO",
+                    "description": "A deep dive into why JavaScript-rendered content can be problematic for search engines.",
+                    "datePublished": "2026-04-01",
+                    "author": { "@type": "Person", "name": "Dev Team" },
+                    "publisher": { "@id": "https://nimble-monstera-795cd4.netlify.app/#org" },
+                    "image": "https://nimble-monstera-795cd4.netlify.app/images/banner.png"
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nimble-monstera-795cd4.netlify.app/" },
+                        { "@type": "ListItem", "position": 2, "name": "JS-Rendered Page" }
+                    ]
+                }
+            ]
+        });
+        document.head.appendChild(schema);
+
+        // Render page content
+        document.getElementById('app').innerHTML = `
+            <style>
+                body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+                h1 { color: #333; }
+                nav.breadcrumb { font-size: 14px; color: #666; margin-bottom: 20px; }
+                nav.breadcrumb a { color: #2980b9; }
+                article { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+                .meta { color: #666; font-size: 14px; margin-bottom: 20px; }
+                .warning { background: #fff3cd; border: 2px solid #f0ad4e; padding: 15px; border-radius: 6px; margin-bottom: 20px; }
+                .warning h3 { color: #856404; margin-top: 0; }
+                a { color: #2980b9; }
+            </style>
+
+            <nav class="breadcrumb"><a href="/">Home</a> &gt; JS-Rendered Page</nav>
+
+            <div class="warning">
+                <h3>JS-Rendered Page</h3>
+                <p>Everything you see on this page — the title, meta description, H1, content, and even the JSON-LD schema — is <strong>injected by JavaScript at runtime</strong>.</p>
+                <p>If you view the HTML source, the &lt;body&gt; is empty except for a &lt;div id="app"&gt; and a &lt;script&gt; tag.</p>
+                <p><strong>SF without JS rendering:</strong> sees empty page → missing title, missing H1, thin content, no schema</p>
+                <p><strong>SF with JS rendering:</strong> sees full content → everything looks normal</p>
+            </div>
+
+            <article>
+                <h1>Why Server-Side Rendering Matters for SEO</h1>
+                <div class="meta">Published: April 1, 2026 | By: Dev Team</div>
+
+                <p>Single-page applications and JavaScript-heavy websites face a fundamental challenge with search engine optimization. While modern search engines can render JavaScript, the process is not instantaneous and comes with significant caveats.</p>
+
+                <h2>The Two-Wave Indexing Problem</h2>
+                <p>Google indexes pages in two waves. The first wave processes the raw HTML — if your content is only in JavaScript, Google sees an empty page initially. The second wave renders the JavaScript, but this can take days or even weeks. During that gap, your content is invisible to search.</p>
+
+                <h2>Client-Side Rendering Risks</h2>
+                <p>When all content is rendered client-side, several things can go wrong: the JavaScript might fail to execute, the rendering budget might be exceeded for large sites, and social media crawlers typically don't execute JavaScript at all — meaning your shared links will have no preview.</p>
+
+                <h2>The Solution</h2>
+                <p>Server-side rendering (SSR) or static site generation (SSG) ensures that the initial HTML response contains all the content search engines need. Frameworks like Next.js, Nuxt, and Astro make this straightforward. For existing SPAs, pre-rendering services can generate static snapshots for crawlers.</p>
+            </article>
+
+            <p><a href="/">Back to homepage</a></p>
+        `;
+    </script>
+</body>
+</html>
