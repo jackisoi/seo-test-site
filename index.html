@@ -228,6 +228,45 @@
     </div>
 
     <div class="section">
+        <h2>Schema.org Pages (Broken — Intentional Issues)</h2>
+        <div class="note">Each broken page clearly describes the schema issue it contains</div>
+        <ul>
+            <li><a href="/articles/category-a/article-1-broken.html">Article 1 BROKEN</a> — Wrong @type (Product instead of Article)</li>
+            <li><a href="/articles/category-a/article-2-broken.html">Article 2 BROKEN</a> — Missing required fields (headline, author, datePublished, image)</li>
+            <li><a href="/products/category-x/product-1-broken.html">Product 1 BROKEN</a> — Missing required fields (name, offers, image)</li>
+            <li><a href="/products/category-x/product-2-broken.html">Product 2 BROKEN</a> — Duplicate Product schemas in same @graph</li>
+            <li><a href="/about-broken/">About BROKEN</a> — Organization + WebSite on sub-page (should be homepage only)</li>
+            <li><a href="/contact-broken/">Contact BROKEN</a> — Broken @id references (point to non-existent nodes)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Schema.org Isolated Tests (/schema-test/)</h2>
+        <div class="note">One specific issue per page for targeted testing</div>
+        <ul>
+            <li><a href="/schema-test/wrong-type.html">Wrong Type</a> — Hotel schema on a blog article page</li>
+            <li><a href="/schema-test/missing-required.html">Missing Required</a> — Product with no name, price, or image</li>
+            <li><a href="/schema-test/org-on-subpage.html">Org on Sub-Page</a> — Organization + WebSite on non-homepage</li>
+            <li><a href="/schema-test/search-no-form.html">SearchAction No Form</a> — SearchAction without search form in HTML</li>
+            <li><a href="/schema-test/duplicate-schemas.html">Duplicate Schemas</a> — Two conflicting LocalBusiness JSON-LD blocks</li>
+            <li><a href="/schema-test/broken-id.html">Broken @id</a> — All @id references point to non-existent nodes</li>
+            <li><a href="/schema-test/faq-swapped.html">FAQ Swapped</a> — Questions and answers swapped in schema</li>
+            <li><a href="/schema-test/faq-html.html">FAQ HTML</a> — Disallowed HTML tags in FAQ answers</li>
+            <li><a href="/schema-test/relative-urls.html">Relative URLs</a> — BreadcrumbList with relative URLs</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Schema.org Combo Tests</h2>
+        <div class="note">Multiple issues per page — tests detection of combined problems</div>
+        <ul>
+            <li><a href="/schema-test/combo-critical.html">Combo Critical</a> — Wrong type + missing fields + broken @id + relative BreadcrumbList</li>
+            <li><a href="/schema-test/combo-minor.html">Combo Minor</a> — FAQ swapped + disallowed HTML + missing recommended image</li>
+            <li><a href="/schema-test/combo-mixed.html">Combo Mixed</a> — Org on sub-page (critical) + missing image (minor) + FAQ content opportunity (recommended)</li>
+        </ul>
+    </div>
+
+    <div class="section">
         <h2>Non-Canonical Homepage Links</h2>
         <p>These link to the homepage in non-canonical ways:</p>
         <ul>

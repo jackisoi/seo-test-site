@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schema Test: Relative URLs in BreadcrumbList - SEO Test Site</title>
+    <meta name="description" content="Schema test page: BreadcrumbList uses relative URLs instead of absolute URLs in item fields.">
+    <link rel="canonical" href="https://nimble-monstera-795cd4.netlify.app/schema-test/relative-urls.html">
+    <!-- SCHEMA BUG: BreadcrumbList uses relative URLs instead of absolute -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "/" },
+        { "@type": "ListItem", "position": 2, "name": "Schema Tests", "item": "/schema-test/" },
+        { "@type": "ListItem", "position": 3, "name": "Relative URLs", "item": "/schema-test/relative-urls.html" }
+      ]
+    }
+    </script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        h1 { color: #333; }
+        .content { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .bug { background: #fce4e4; border: 2px solid #c0392b; padding: 15px; border-radius: 6px; margin-bottom: 20px; }
+        .bug h3 { color: #c0392b; margin-top: 0; }
+        code { background: #f0f0f0; padding: 2px 6px; border-radius: 3px; }
+        a { color: #2980b9; }
+    </style>
+</head>
+<body>
+    <div class="bug">
+        <h3>Schema Bug: Relative URLs in BreadcrumbList</h3>
+        <p>All <code>item</code> fields use relative URLs (<code>/</code>, <code>/schema-test/</code>) instead of absolute URLs (<code>https://nimble-monstera-795cd4.netlify.app/</code>). Google requires absolute URLs in structured data.</p>
+    </div>
+    <div class="content">
+        <h1>Relative URLs Test</h1>
+        <nav>Home &gt; Schema Tests &gt; Relative URLs</nav>
+        <p>This page tests BreadcrumbList with relative URLs.</p>
+        <p><a href="/">Back to homepage</a></p>
+    </div>
+</body>
+</html>

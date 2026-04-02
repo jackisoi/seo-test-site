@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schema Test: Wrong Type - SEO Test Site</title>
+    <meta name="description" content="Schema test page: Hotel schema on a blog article page. The @type doesn't match the page content.">
+    <link rel="canonical" href="https://nimble-monstera-795cd4.netlify.app/schema-test/wrong-type.html">
+    <!-- SCHEMA BUG: Hotel type on a blog article page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Hotel",
+          "@id": "https://nimble-monstera-795cd4.netlify.app/schema-test/wrong-type.html#hotel",
+          "name": "10 Tips for Better SEO",
+          "description": "Learn how to improve your website's search engine optimization with these proven tips.",
+          "starRating": { "@type": "Rating", "ratingValue": "5" },
+          "address": { "@type": "PostalAddress", "addressLocality": "Internet" }
+        }
+      ]
+    }
+    </script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        h1 { color: #333; }
+        .content { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .bug { background: #fce4e4; border: 2px solid #c0392b; padding: 15px; border-radius: 6px; margin-bottom: 20px; }
+        .bug h3 { color: #c0392b; margin-top: 0; }
+        a { color: #2980b9; }
+    </style>
+</head>
+<body>
+    <div class="bug">
+        <h3>Schema Bug: Wrong @type — Hotel on Article Page</h3>
+        <p>This is a blog article but uses <code>@type: "Hotel"</code>. Should be <code>Article</code> or <code>BlogPosting</code>.</p>
+    </div>
+    <div class="content">
+        <h1>10 Tips for Better SEO</h1>
+        <p>By: Marketing Team | Published: March 2026</p>
+        <p>Search engine optimization is the practice of improving your website to increase its visibility in search results. Here are 10 proven tips to help you get started with SEO.</p>
+        <h2>1. Focus on Quality Content</h2>
+        <p>Content is king. Create valuable, unique content that answers your audience's questions.</p>
+        <h2>2. Optimize Your Title Tags</h2>
+        <p>Keep titles under 60 characters and include your primary keyword near the beginning.</p>
+        <p><a href="/">Back to homepage</a></p>
+    </div>
+</body>
+</html>

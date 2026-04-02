@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schema Test: Combo Minor Issues - SEO Test Site</title>
+    <meta name="description" content="Schema test page: Multiple minor issues — FAQ with swapped Q&A + disallowed HTML in FAQ + missing recommended fields.">
+    <link rel="canonical" href="https://nimble-monstera-795cd4.netlify.app/schema-test/combo-minor.html">
+    <!-- SCHEMA BUGS: 1) FAQ swapped Q&A 2) Disallowed HTML 3) Missing recommended fields on Article -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": "https://nimble-monstera-795cd4.netlify.app/schema-test/combo-minor.html#article",
+          "headline": "How to Optimize Your FAQ Page",
+          "datePublished": "2026-03-25",
+          "author": {
+            "@type": "Person",
+            "name": "Test Author"
+          },
+          "publisher": { "@id": "https://nimble-monstera-795cd4.netlify.app/#org" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Yes, FAQ schema can significantly improve your click-through rate by showing expandable answers directly in search results.",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Does FAQ schema help with SEO?"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I add FAQ schema?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "<div><table><tr><td>Step 1</td><td>Write your questions</td></tr></table><script>track()</script></div>"
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        h1 { color: #333; }
+        .content { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .bug { background: #fce4e4; border: 2px solid #c0392b; padding: 15px; border-radius: 6px; margin-bottom: 20px; }
+        .bug h3 { color: #c0392b; margin-top: 0; }
+        code { background: #f0f0f0; padding: 2px 6px; border-radius: 3px; }
+        a { color: #2980b9; }
+    </style>
+</head>
+<body>
+    <div class="bug">
+        <h3>Schema Bugs: 3 Minor Issues Combined</h3>
+        <ol>
+            <li><strong>FAQ Q&A swapped:</strong> First question has the answer in <code>name</code> field</li>
+            <li><strong>Disallowed HTML:</strong> Second FAQ answer uses <code>div, table, script</code> tags</li>
+            <li><strong>Missing recommended fields:</strong> Article has no <code>image</code> (recommended by Google)</li>
+        </ol>
+    </div>
+    <div class="content">
+        <h1>How to Optimize Your FAQ Page</h1>
+        <p>By: Test Author | March 25, 2026</p>
+        <h2>Does FAQ schema help with SEO?</h2>
+        <p>Yes, FAQ schema can significantly improve your click-through rate.</p>
+        <h2>How do I add FAQ schema?</h2>
+        <p>Step 1: Write your questions. Step 2: Add JSON-LD markup.</p>
+        <p><a href="/">Back to homepage</a></p>
+    </div>
+</body>
+</html>

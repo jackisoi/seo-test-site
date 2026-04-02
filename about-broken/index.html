@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us (BROKEN) - SEO Test Site</title>
+    <meta name="description" content="Broken version of about page. Schema issue: Organization and WebSite schemas on a sub-page (should be homepage only).">
+    <link rel="canonical" href="https://nimble-monstera-795cd4.netlify.app/about-broken/">
+    <!-- SCHEMA BUG: Organization + WebSite on a sub-page — these should only be on the homepage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://nimble-monstera-795cd4.netlify.app/about-broken/#org",
+          "name": "SEO Test Company",
+          "url": "https://nimble-monstera-795cd4.netlify.app/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://nimble-monstera-795cd4.netlify.app/images/banner.png"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://nimble-monstera-795cd4.netlify.app/about-broken/#website",
+          "name": "SEO Test Site",
+          "url": "https://nimble-monstera-795cd4.netlify.app/",
+          "publisher": { "@id": "https://nimble-monstera-795cd4.netlify.app/about-broken/#org" }
+        },
+        {
+          "@type": "AboutPage",
+          "@id": "https://nimble-monstera-795cd4.netlify.app/about-broken/",
+          "name": "About Us",
+          "url": "https://nimble-monstera-795cd4.netlify.app/about-broken/",
+          "isPartOf": { "@id": "https://nimble-monstera-795cd4.netlify.app/about-broken/#website" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://nimble-monstera-795cd4.netlify.app/about-broken/#breadcrumb",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nimble-monstera-795cd4.netlify.app/" },
+            { "@type": "ListItem", "position": 2, "name": "About Us (BROKEN)", "item": "https://nimble-monstera-795cd4.netlify.app/about-broken/" }
+          ]
+        }
+      ]
+    }
+    </script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        h1 { color: #333; }
+        nav.breadcrumb { font-size: 14px; color: #666; margin-bottom: 20px; }
+        nav.breadcrumb a { color: #2980b9; }
+        .content { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .bug { background: #fce4e4; border: 2px solid #c0392b; padding: 15px; border-radius: 6px; margin-bottom: 20px; }
+        .bug h3 { color: #c0392b; margin-top: 0; }
+        code { background: #f0f0f0; padding: 2px 6px; border-radius: 3px; }
+        a { color: #2980b9; }
+    </style>
+</head>
+<body>
+    <nav class="breadcrumb"><a href="/">Home</a> &gt; About Us (BROKEN)</nav>
+
+    <div class="bug">
+        <h3>Schema Bug: Organization + WebSite on Sub-Page</h3>
+        <p>This sub-page defines its own <code>Organization</code> and <code>WebSite</code> schemas. These should only appear on the homepage (level 0). Sub-pages should reference the homepage's <code>@id</code> values instead of redefining them.</p>
+    </div>
+
+    <div class="content">
+        <h1>About Us</h1>
+        <p>SEO Test Company was founded in 2020 with a simple mission: help businesses improve their online visibility.</p>
+    </div>
+</body>
+</html>

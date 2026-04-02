@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schema Test: Duplicate Schemas - SEO Test Site</title>
+    <meta name="description" content="Schema test page: Two separate JSON-LD blocks both defining the same schema type with different data.">
+    <link rel="canonical" href="https://nimble-monstera-795cd4.netlify.app/schema-test/duplicate-schemas.html">
+    <!-- SCHEMA BUG: Two separate JSON-LD blocks with conflicting LocalBusiness data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SEO Test Company",
+      "telephone": "+1-555-111-1111",
+      "address": { "@type": "PostalAddress", "addressLocality": "San Francisco" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SEO Test Corp",
+      "telephone": "+1-555-222-2222",
+      "address": { "@type": "PostalAddress", "addressLocality": "New York" }
+    }
+    </script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        h1 { color: #333; }
+        .content { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .bug { background: #fce4e4; border: 2px solid #c0392b; padding: 15px; border-radius: 6px; margin-bottom: 20px; }
+        .bug h3 { color: #c0392b; margin-top: 0; }
+        a { color: #2980b9; }
+    </style>
+</head>
+<body>
+    <div class="bug">
+        <h3>Schema Bug: Duplicate Schemas with Conflicting Data</h3>
+        <p>Two separate <code>&lt;script type="application/ld+json"&gt;</code> blocks both define <code>LocalBusiness</code> with different names, phones, and addresses. Google may merge, ignore, or pick one unpredictably.</p>
+    </div>
+    <div class="content">
+        <h1>Our Office</h1>
+        <p>Visit us at our San Francisco headquarters.</p>
+        <p>Phone: +1 (555) 123-4567</p>
+        <p><a href="/">Back to homepage</a></p>
+    </div>
+</body>
+</html>
