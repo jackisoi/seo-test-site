@@ -48,11 +48,30 @@
         a { color: #2980b9; }
         ul { line-height: 2; }
         .note { background: #fff3cd; padding: 10px; border-radius: 4px; margin-bottom: 10px; font-size: 14px; }
+        .copy-bar { display: flex; gap: 10px; margin-bottom: 20px; }
+        .copy-btn { padding: 10px 16px; border: 2px solid #2980b9; border-radius: 6px; background: #2980b9; color: white; font-size: 14px; cursor: pointer; transition: all 0.2s; }
+        .copy-btn:hover { background: #1a6da3; }
+        .copy-btn.copied { background: #27ae60; border-color: #27ae60; }
     </style>
 </head>
 <body>
     <h1>SEO Test Site</h1>
     <p>This site is intentionally filled with SEO issues for testing purposes. Each page demonstrates specific problems that an SEO audit tool should detect.</p>
+
+    <div class="copy-bar">
+        <button class="copy-btn" onclick="copyUrl(this, 'https://nimble-monstera-795cd4.netlify.app/')">Copy Homepage URL</button>
+        <button class="copy-btn" onclick="copyUrl(this, 'https://nimble-monstera-795cd4.netlify.app/sitemap.xml')">Copy Sitemap URL</button>
+        <button class="copy-btn" onclick="copyUrl(this, 'https://nimble-monstera-795cd4.netlify.app/image-sitemap.xml')">Copy Image Sitemap URL</button>
+    </div>
+    <script>
+    function copyUrl(btn, url) {
+        navigator.clipboard.writeText(url);
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = btn.dataset.label; btn.classList.remove('copied'); }, 1500);
+    }
+    document.querySelectorAll('.copy-btn').forEach(b => b.dataset.label = b.textContent);
+    </script>
 
     <div class="section">
         <h2>Title &amp; Description Issues</h2>
