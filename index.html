@@ -7,6 +7,39 @@
     <meta name="description" content="A test website intentionally filled with SEO issues for testing SEO audit tools. Every page has deliberate problems.">
     <link rel="canonical" href="https://nimble-monstera-795cd4.netlify.app/">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://nimble-monstera-795cd4.netlify.app/#org",
+          "name": "SEO Test Company",
+          "url": "https://nimble-monstera-795cd4.netlify.app/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://nimble-monstera-795cd4.netlify.app/images/banner.png"
+          },
+          "sameAs": []
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://nimble-monstera-795cd4.netlify.app/#website",
+          "name": "SEO Test Site",
+          "url": "https://nimble-monstera-795cd4.netlify.app/",
+          "publisher": { "@id": "https://nimble-monstera-795cd4.netlify.app/#org" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://nimble-monstera-795cd4.netlify.app/",
+          "name": "SEO Test Site - Intentionally Broken for Testing",
+          "url": "https://nimble-monstera-795cd4.netlify.app/",
+          "isPartOf": { "@id": "https://nimble-monstera-795cd4.netlify.app/#website" },
+          "about": { "@id": "https://nimble-monstera-795cd4.netlify.app/#org" }
+        }
+      ]
+    }
+    </script>
     <style>
         body { font-family: Arial, sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
         h1 { color: #333; }
@@ -160,6 +193,37 @@
         <h2>Search Results Page</h2>
         <ul>
             <li><a href="/search-results.html">Search Results</a> — Should be noindexed but isn't</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Schema.org Pages (Clean Hierarchy)</h2>
+        <div class="note">These pages have correct JSON-LD schemas with proper @id references and hierarchy</div>
+        <ul>
+            <li><strong>Homepage</strong> — Organization + WebSite + WebPage (level 0)</li>
+            <li><a href="/articles/">Articles</a> — CollectionPage (level 1)
+                <ul>
+                    <li><a href="/articles/category-a/">Category A: Technology</a> — CollectionPage (level 11)
+                        <ul>
+                            <li><a href="/articles/category-a/article-1.html">The Future of Web Development</a> — Article (level 111)</li>
+                            <li><a href="/articles/category-a/article-2.html">Understanding Core Web Vitals</a> — Article (level 111)</li>
+                        </ul>
+                    </li>
+                    <li><a href="/articles/category-b/">Category B: Marketing</a> — CollectionPage (level 12)</li>
+                </ul>
+            </li>
+            <li><a href="/products/">Products</a> — CollectionPage (level 1)
+                <ul>
+                    <li><a href="/products/category-x/">Electronics</a> — CollectionPage (level 11)
+                        <ul>
+                            <li><a href="/products/category-x/product-1.html">Pro Laptop 16"</a> — Product (level 111)</li>
+                            <li><a href="/products/category-x/product-2.html">UltraWide Monitor 34"</a> — Product (level 111)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/about/">About Us</a> — AboutPage (level 1)</li>
+            <li><a href="/contact/">Contact Us</a> — ContactPage (level 1)</li>
         </ul>
     </div>
 
