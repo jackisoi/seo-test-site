@@ -26,7 +26,7 @@
           "name": "How much does it cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "<div class='pricing'><table><tr><td>Basic</td><td>$99/mo</td></tr><tr><td>Pro</td><td>$299/mo</td></tr></table><script>alert('xss')</script><iframe src='https://evil.com'></iframe></div>"
+            "text": "<div class='pricing'><table><tr><td>Basic</td><td>$99/mo</td></tr><tr><td>Pro</td><td>$299/mo</td></tr></table><img onerror='alert(1)' src='x'><iframe src='https://evil.com'></iframe></div>"
           }
         }
       ]
@@ -48,7 +48,7 @@
         <p>Google allows limited HTML in FAQ answers (<code>p, br, ul, ol, li, a, b, strong, i, em</code>). This page tests two cases:</p>
         <ul>
             <li><strong>Q1:</strong> Uses allowed HTML tags — should be OK</li>
-            <li><strong>Q2:</strong> Uses disallowed tags (<code>div, table, script, iframe</code>) — should be flagged</li>
+            <li><strong>Q2:</strong> Uses disallowed tags (<code>div, table, img onerror, iframe</code>) — should be flagged</li>
         </ul>
     </div>
     <div class="content">
