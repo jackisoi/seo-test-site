@@ -52,6 +52,7 @@
         .copy-btn { padding: 10px 16px; border: 2px solid #2980b9; border-radius: 6px; background: #2980b9; color: white; font-size: 14px; cursor: pointer; transition: all 0.2s; }
         .copy-btn:hover { background: #1a6da3; }
         .copy-btn.copied { background: #27ae60; border-color: #27ae60; }
+        .qa { color: #888; font-size: 12px; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -76,44 +77,44 @@
     <div class="section">
         <h2>Title &amp; Description Issues</h2>
         <ul>
-            <li><a href="/missing-title.html">Missing Title</a> — No title tag at all</li>
-            <li><a href="/title-too-short.html">Title Too Short</a> — Title under 30 characters</li>
-            <li><a href="/title-too-long.html">Title Too Long</a> — Title over 60 characters</li>
-            <li><a href="/duplicate-title-1.html">Duplicate Title Page 1</a> — Same title as page 2</li>
-            <li><a href="/duplicate-title-2.html">Duplicate Title Page 2</a> — Same title as page 1</li>
-            <li><a href="/missing-description.html">Missing Description</a> — No meta description</li>
-            <li><a href="/description-too-short.html">Description Too Short</a> — Under 70 characters</li>
-            <li><a href="/description-too-long.html">Description Too Long</a> — Over 160 characters</li>
-            <li><a href="/duplicate-desc-1.html">Duplicate Description 1</a> — Same description as page 2</li>
-            <li><a href="/duplicate-desc-2.html">Duplicate Description 2</a> — Same description as page 1</li>
-            <li><a href="/multiple-titles.html">Multiple Title Tags</a> — Two title tags</li>
-            <li><a href="/multiple-descriptions.html">Multiple Description Tags</a> — Two meta descriptions</li>
-            <li><a href="/keyword-stuffing.html">Keyword Stuffing</a> — Stuffed title, H1, description, and content</li>
+            <li><span class="qa">#1</span> <a href="/missing-title.html">Missing Title</a> — No title tag at all</li>
+            <li><span class="qa">#2</span> <a href="/title-too-short.html">Title Too Short</a> — Title under 30 characters</li>
+            <li><span class="qa">#4</span> <a href="/title-too-long.html">Title Too Long</a> — Title over 60 characters</li>
+            <li><span class="qa">#5</span> <a href="/duplicate-title-1.html">Duplicate Title Page 1</a> — Same title as page 2</li>
+            <li><span class="qa">#5</span> <a href="/duplicate-title-2.html">Duplicate Title Page 2</a> — Same title as page 1</li>
+            <li><span class="qa">#9</span> <a href="/missing-description.html">Missing Description</a> — No meta description</li>
+            <li><span class="qa">#6</span> <a href="/description-too-short.html">Description Too Short</a> — Under 70 characters</li>
+            <li><span class="qa">#7</span> <a href="/description-too-long.html">Description Too Long</a> — Over 155 characters</li>
+            <li><span class="qa">#8</span> <a href="/duplicate-desc-1.html">Duplicate Description 1</a> — Same description as page 2</li>
+            <li><span class="qa">#8</span> <a href="/duplicate-desc-2.html">Duplicate Description 2</a> — Same description as page 1</li>
+            <li><span class="qa">#49</span> <a href="/multiple-titles.html">Multiple Title Tags</a> — Two title tags</li>
+            <li><span class="qa">#51</span> <a href="/multiple-descriptions.html">Multiple Description Tags</a> — Two meta descriptions</li>
+            <li><span class="qa">#15</span> <a href="/keyword-stuffing.html">Keyword Stuffing</a> — Stuffed title, H1, description, and content</li>
         </ul>
     </div>
 
     <div class="section">
         <h2>H1 Issues</h2>
         <ul>
-            <li><a href="/missing-h1.html">Missing H1</a> — No H1 tag on page</li>
-            <li><a href="/multiple-h1.html">Multiple H1 Tags</a> — Two H1 tags</li>
-            <li><a href="/empty-h1.html">Empty H1</a> — H1 tag with no text</li>
-            <li><a href="/duplicate-h1-1.html">Duplicate H1 Page 1</a> — Same H1 as page 2</li>
-            <li><a href="/duplicate-h1-2.html">Duplicate H1 Page 2</a> — Same H1 as page 1</li>
+            <li><span class="qa">#11</span> <a href="/missing-h1.html">Missing H1</a> — No H1 tag on page</li>
+            <li><span class="qa">#10</span> <a href="/multiple-h1.html">Multiple H1 Tags</a> — Two H1 tags</li>
+            <li><span class="qa">#11</span> <a href="/empty-h1.html">Empty H1</a> — H1 tag with no text</li>
+            <li><span class="qa">#12</span> <a href="/duplicate-h1-1.html">Duplicate H1 Page 1</a> — Same H1 as page 2</li>
+            <li><span class="qa">#12</span> <a href="/duplicate-h1-2.html">Duplicate H1 Page 2</a> — Same H1 as page 1</li>
         </ul>
     </div>
 
     <div class="section">
         <h2>Canonical Issues</h2>
         <ul>
-            <li><a href="/missing-canonical.html">Missing Canonical</a> — No canonical tag</li>
-            <li><a href="/wrong-canonical.html">Wrong Canonical</a> — Points to a different page</li>
-            <li><a href="/multiple-canonicals.html">Multiple Canonicals</a> — Two canonical tags</li>
-            <li><a href="/canonical-in-body.html">Canonical in Body</a> — Canonical tag outside head</li>
-            <li><a href="/canonical-to-redirect.html">Canonical to Redirect</a> — Canonical points to redirecting URL</li>
-            <li><a href="/canonical-to-broken.html">Canonical to Broken</a> — Canonical points to 404 page</li>
-            <li><a href="/recursive-canonical.html">Recursive Canonical</a> — Two pages point canonical to each other</li>
-            <li><a href="/recursive-canonical-2.html">Recursive Canonical 2</a> — Partner of recursive canonical</li>
+            <li><span class="qa">#52</span> <a href="/missing-canonical.html">Missing Canonical</a> — No canonical tag</li>
+            <li><span class="qa">#58</span> <a href="/wrong-canonical.html">Wrong Canonical</a> — Points to a different page</li>
+            <li><span class="qa">#50</span> <a href="/multiple-canonicals.html">Multiple Canonicals</a> — Two canonical tags</li>
+            <li><span class="qa">#50</span> <a href="/canonical-in-body.html">Canonical in Body</a> — Canonical tag outside head</li>
+            <li><span class="qa">#60</span> <a href="/canonical-to-redirect.html">Canonical to Redirect</a> — Canonical points to redirecting URL</li>
+            <li><span class="qa">#59</span> <a href="/canonical-to-broken.html">Canonical to Broken</a> — Canonical points to 404 page</li>
+            <li><span class="qa">#61</span> <a href="/recursive-canonical.html">Recursive Canonical</a> — Two pages point canonical to each other</li>
+            <li><span class="qa">#61</span> <a href="/recursive-canonical-2.html">Recursive Canonical 2</a> — Partner of recursive canonical</li>
         </ul>
     </div>
 
@@ -121,63 +122,65 @@
         <h2>Redirect Issues</h2>
         <div class="note">These use Netlify _redirects file for real HTTP status codes</div>
         <ul>
-            <li><a href="/redirect-301">301 Redirect</a> — Permanent redirect to /redirect-destination.html</li>
-            <li><a href="/redirect-302">302 Redirect</a> — Temporary redirect to /redirect-destination.html</li>
-            <li><a href="/chain-step-1">Redirect Chain</a> — step-1 → step-2 → step-3 → destination</li>
-            <li><a href="/redirect-to-404">Redirect to 404</a> — Redirects to a page that doesn't exist</li>
-            <li><a href="/meta-refresh.html">Meta Refresh Redirect</a> — Uses meta refresh tag</li>
+            <li><span class="qa">#62</span> <a href="/redirect-301">301 Redirect</a> — Permanent redirect to /redirect-destination.html</li>
+            <li><span class="qa">#63</span> <a href="/redirect-302">302 Redirect</a> — Temporary redirect to /redirect-destination.html</li>
+            <li><span class="qa">#64</span> <a href="/chain-step-1">Redirect Chain</a> — step-1 → step-2 → step-3 → destination</li>
+            <li><span class="qa">#65</span> <a href="/redirect-to-404">Redirect to 404</a> — Redirects to a page that doesn't exist</li>
+            <li><span class="qa">#69</span> <a href="/meta-refresh.html">Meta Refresh Redirect</a> — Uses meta refresh tag</li>
             <li><a href="/redirect-destination.html">Redirect Destination</a> — Target of redirects</li>
-            <li><a href="/loop-a">Redirect Loop A</a> — A→B→A infinite loop (QA #67)</li>
-            <li><a href="/old-event">Redirect to Noindex</a> — Redirects to noindex page (QA #71)</li>
-            <li><a href="/images/old-logo.png">Image Redirect</a> — Old image URL redirects to new (QA #72)</li>
+            <li><span class="qa">#67</span> <a href="/loop-a">Redirect Loop A</a> — A→B→A infinite loop</li>
+            <li><span class="qa">#71</span> <a href="/old-event">Redirect to Noindex</a> — Redirects to noindex page</li>
+            <li><span class="qa">#72</span> <a href="/images/old-logo.png">Image Redirect</a> — Old image URL redirects to new</li>
+            <li><span class="qa">#70</span> <a href="/js-redirect.html">JavaScript Redirect</a> — Client-side redirect via JS</li>
+            <li><span class="qa">#68</span> <a href="/links-to-redirects.html">Links to Redirects</a> — Internal links pointing to redirecting URLs</li>
         </ul>
     </div>
 
     <div class="section">
         <h2>Broken Links &amp; Resources</h2>
         <ul>
-            <li><a href="/broken-links.html">Broken Links Page</a> — Links to non-existent pages</li>
-            <li><a href="/broken-images.html">Broken Images Page</a> — References non-existent images</li>
-            <li><a href="/broken-resources.html">Broken Resources Page</a> — Links to missing CSS/JS</li>
-            <li><a href="/broken-external-link.html">Broken External Link</a> — Links to external 404 pages (QA #31)</li>
-            <li><a href="/broken-pdf.html">Broken PDF Links</a> — Links to non-existent PDFs (QA #32)</li>
-            <li><a href="/broken-anchor.html">Broken Anchor Links</a> — Broken #fragment identifiers (QA #38)</li>
-            <li><a href="/broken-image-link.html">Broken Image Links</a> — Images linking to 404 pages (QA #39)</li>
-            <li><a href="/malformed-url.html">Malformed URLs</a> — Email addresses as hyperlinks (QA #43)</li>
+            <li><span class="qa">#30</span> <a href="/broken-links.html">Broken Links Page</a> — Links to non-existent pages</li>
+            <li><span class="qa">#24</span> <a href="/broken-images.html">Broken Images Page</a> — References non-existent images</li>
+            <li><span class="qa">#57</span> <a href="/broken-resources.html">Broken Resources Page</a> — Links to missing CSS/JS</li>
+            <li><span class="qa">#31</span> <a href="/broken-external-link.html">Broken External Link</a> — Links to external 404 pages</li>
+            <li><span class="qa">#32</span> <a href="/broken-pdf.html">Broken PDF Links</a> — Links to non-existent PDFs</li>
+            <li><span class="qa">#38</span> <a href="/broken-anchor.html">Broken Anchor Links</a> — Broken #fragment identifiers</li>
+            <li><span class="qa">#39</span> <a href="/broken-image-link.html">Broken Image Links</a> — Images linking to 404 pages</li>
+            <li><span class="qa">#43</span> <a href="/malformed-url.html">Malformed URLs</a> — Email addresses as hyperlinks</li>
             <li><a href="/page-does-not-exist.html">Direct 404 Link</a> — This page doesn't exist</li>
-            <li><a href="/another-missing-page.html">Another 404 Link</a> — Also doesn't exist</li>
         </ul>
     </div>
 
     <div class="section">
         <h2>Image Issues</h2>
         <ul>
-            <li><a href="/images-missing-alt.html">Missing ALT Text</a> — Images without alt attributes</li>
-            <li><a href="/images-long-alt.html">ALT Too Long</a> — Alt text over 150 characters</li>
+            <li><span class="qa">#23</span> <a href="/images-missing-alt.html">Missing ALT Text</a> — Images without alt attributes</li>
+            <li><span class="qa">#26</span> <a href="/images-long-alt.html">ALT Too Long</a> — Alt text over 150 characters</li>
             <li><a href="/images-missing-dimensions.html">Missing Dimensions</a> — Images without width/height</li>
-            <li><a href="/image-links-no-alt.html">Image Links Missing ALT</a> — Linked images without alt text</li>
-            <li><a href="/tiny-image-long-alt.html">Tiny Images with Long ALT</a> — 1x1 pixel images with 200+ char ALT (QA #28)</li>
-            <li><a href="/http-image.html">HTTP Image URLs</a> — Images loaded via HTTP not HTTPS (QA #29)</li>
+            <li><span class="qa">#25</span> <a href="/image-links-no-alt.html">Image Links Missing ALT</a> — Linked images without alt text</li>
+            <li><span class="qa">#28</span> <a href="/tiny-image-long-alt.html">Tiny Images with Long ALT</a> — 1x1 pixel images with 200+ char ALT</li>
+            <li><span class="qa">#29</span> <a href="/http-image.html">HTTP Image URLs</a> — Images loaded via HTTP not HTTPS</li>
+            <li><span class="qa">#27</span> <a href="/images/old-logo.png">Image Redirect</a> — Old image URL redirects to new</li>
         </ul>
     </div>
 
     <div class="section">
         <h2>HTML &amp; Content Issues</h2>
         <ul>
-            <li><a href="/lorem-ipsum.html">Lorem Ipsum Content</a> — Page with placeholder text</li>
-            <li><a href="/flash-page.html">Flash Content</a> — Page with Flash embed</li>
-            <li><a href="/frames-page.html">Frames Page</a> — Page using iframes/framesets</li>
-            <li><a href="/no-doctype.html">No Doctype</a> — Missing DOCTYPE declaration</li>
-            <li><a href="/no-encoding.html">No Encoding</a> — Missing charset meta tag</li>
-            <li><a href="/deprecated-tags.html">Deprecated HTML</a> — Uses deprecated HTML tags</li>
+            <li><span class="qa">#14</span> <a href="/lorem-ipsum.html">Lorem Ipsum Content</a> — Page with placeholder text</li>
+            <li><span class="qa">#56</span> <a href="/flash-page.html">Flash Content</a> — Page with Flash embed</li>
+            <li><span class="qa">#55</span> <a href="/frames-page.html">Frames Page</a> — Page using iframes/framesets</li>
+            <li><span class="qa">#47</span> <a href="/no-doctype.html">No Doctype</a> — Missing DOCTYPE declaration</li>
+            <li><span class="qa">#48</span> <a href="/no-encoding.html">No Encoding</a> — Missing charset meta tag</li>
+            <li><span class="qa">#54</span> <a href="/deprecated-tags.html">Deprecated HTML</a> — Uses deprecated HTML tags</li>
             <li><a href="/meta-in-body.html">Meta Tags in Body</a> — Meta tags placed in body instead of head</li>
-            <li><a href="/duplicate-meta-tags.html">Duplicate Meta Tags</a> — Same meta tag repeated</li>
-            <li><a href="/low-content.html">Low Content Rate</a> — Very little text, lots of HTML</li>
-            <li><a href="/thin-content.html">Thin Content</a> — Very short page content</li>
-            <li><a href="/high-character-count.html">High Character Count</a> — Extremely long page 20,000+ words (QA #20)</li>
-            <li><a href="/low-readability.html">Low Readability</a> — Complex scientific text, Flesch &lt; 30 (QA #22)</li>
-            <li><a href="/title-content-mismatch.html">Title-Content Mismatch</a> — Title about pizza, content about dogs (QA #53)</li>
-            <li><a href="/keyword-stuffing-h1.html">Keyword Stuffing H1</a> — H1 repeats keywords excessively (QA #16)</li>
+            <li><span class="qa">#51</span> <a href="/duplicate-meta-tags.html">Duplicate Meta Tags</a> — Same meta tag repeated</li>
+            <li><span class="qa">#17</span> <a href="/low-content.html">Low Content Rate</a> — Very little text, lots of HTML</li>
+            <li><span class="qa">#13</span> <a href="/thin-content.html">Thin Content</a> — Very short page content</li>
+            <li><span class="qa">#20</span> <a href="/high-character-count.html">High Character Count</a> — Extremely long page 20,000+ words</li>
+            <li><span class="qa">#22</span> <a href="/low-readability.html">Low Readability</a> — Complex scientific text, Flesch &lt; 30</li>
+            <li><span class="qa">#53</span> <a href="/title-content-mismatch.html">Title-Content Mismatch</a> — Title about pizza, content about dogs</li>
+            <li><span class="qa">#16</span> <a href="/keyword-stuffing-h1.html">Keyword Stuffing H1</a> — H1 repeats keywords excessively</li>
         </ul>
     </div>
 
@@ -186,61 +189,82 @@
         <ul>
             <li><a href="/URL-With-Uppercase.html">Uppercase URL</a> — URL contains uppercase letters</li>
             <li><a href="/url with spaces.html">Spaces in URL</a> — URL contains spaces</li>
-            <li><a href="/url_with_underscores.html">Underscores in URL</a> — URL uses underscores instead of hyphens</li>
+            <li><span class="qa">#44</span> <a href="/url_with_underscores.html">Underscores in URL</a> — URL uses underscores instead of hyphens</li>
             <li><a href="/url---multiple-hyphens.html">Multiple Hyphens</a> — URL has consecutive hyphens</li>
-            <li><a href="/url?param=value&other=123">Dynamic URL</a> — URL with query parameters</li>
-            <li><a href="/this-is-a-very-long-url-that-exceeds-the-recommended-length-for-seo-friendly-urls-and-should-be-flagged.html">Very Long URL</a> — Exceeds recommended length</li>
-            <li><a href="/trailing-slash">No Trailing Slash</a> — Inconsistent trailing slash</li>
-            <li><a href="/trailing-slash/">With Trailing Slash</a> — Inconsistent trailing slash</li>
+            <li><span class="qa">#45</span> <a href="/url?param=value&amp;other=123">Dynamic URL</a> — URL with query parameters</li>
+            <li><span class="qa">#46</span> <a href="/this-is-a-very-long-url-that-exceeds-the-recommended-length-for-seo-friendly-urls-and-should-be-flagged.html">Very Long URL</a> — Exceeds recommended length</li>
         </ul>
     </div>
 
     <div class="section">
         <h2>Indexability Issues</h2>
         <ul>
-            <li><a href="/noindex-page.html">Noindex Page</a> — Has noindex meta tag</li>
+            <li><span class="qa">#73</span> <a href="/noindex-page.html">Noindex Page</a> — Has noindex meta tag</li>
             <li><a href="/nofollow-page.html">Nofollow Page</a> — Has nofollow meta tag</li>
             <li><a href="/noindex-nofollow.html">Noindex + Nofollow</a> — Both noindex and nofollow</li>
-            <li><a href="/blocked-by-robots/">Blocked by Robots</a> — Page disallowed in robots.txt (QA #74)</li>
+            <li><span class="qa">#74</span> <a href="/blocked-by-robots/">Blocked by Robots</a> — Page disallowed in robots.txt</li>
+            <li><span class="qa">#76</span> <a href="/fake-page-that-looks-like-404">Soft 404</a> — Returns 200 for a non-existent page</li>
         </ul>
     </div>
 
     <div class="section">
         <h2>Link Issues</h2>
         <ul>
-            <li><a href="/excessive-links.html">Excessive Outgoing Links</a> — Page with 200+ links</li>
-            <li><a href="/missing-anchor-text.html">Missing Anchor Text</a> — Links with no text</li>
-            <li><a href="/links-to-redirects.html">Links to Redirects</a> — Internal links pointing to redirecting URLs</li>
+            <li><span class="qa">#35</span> <a href="/excessive-links.html">Excessive Outgoing Links</a> — Page with 200+ links</li>
+            <li><span class="qa">#33</span> <a href="/missing-anchor-text.html">Missing Anchor Text</a> — Links with no text</li>
+            <li><span class="qa">#34</span> <a href="/non-canonical-homepage-link.html">Non-Canonical Homepage Links</a> — Links to homepage with wrong format</li>
+            <li><span class="qa">#41</span> <a href="/internal-nofollow.html">Internal Nofollow</a> — Internal links with rel=nofollow</li>
+            <li><span class="qa">#42</span> <a href="/duplicate-anchor-text.html">Duplicate Anchor Text</a> — Same anchor text for different URLs</li>
+            <li><span class="qa">#40</span> <a href="/multiple-slashes.html">Multiple Slashes</a> — Links with // in URL path</li>
             <li><a href="http://nimble-monstera-795cd4.netlify.app/http-link.html">HTTP Link</a> — Link using HTTP instead of HTTPS</li>
-            <li><a href="/non-canonical-homepage-link.html">Non-Canonical Homepage Links</a> — Links to homepage with wrong format</li>
-            <li><a href="/internal-nofollow.html">Internal Nofollow</a> — Internal links with rel=nofollow (QA #41)</li>
-            <li><a href="/duplicate-anchor-text.html">Duplicate Anchor Text</a> — Same anchor text for different URLs (QA #42)</li>
-            <li><a href="/multiple-slashes.html">Multiple Slashes</a> — Links with // in URL path (QA #40)</li>
-            <li><a href="/js-redirect.html">JavaScript Redirect</a> — Client-side redirect via JS (QA #70)</li>
         </ul>
     </div>
 
     <div class="section">
         <h2>Deep Pages (Click Depth)</h2>
         <ul>
-            <li><a href="/level1/page.html">Level 1</a> — Links to level 2, which links to level 3...</li>
+            <li><span class="qa">#37</span> <a href="/level1/page.html">Level 1</a> — Links to level 2, which links to level 3, then level 4</li>
         </ul>
     </div>
 
     <div class="section">
         <h2>Duplicate Content</h2>
         <ul>
-            <li><a href="/exact-duplicate-a">Exact Duplicate A</a> — Same content as Duplicate B (QA #19)</li>
-            <li><a href="/exact-duplicate-b">Exact Duplicate B</a> — Same content as Duplicate A (QA #19)</li>
-            <li><a href="/near-duplicate-1.html">Near Duplicate 1</a> — Very similar to Near Duplicate 2 (QA #18)</li>
-            <li><a href="/near-duplicate-2.html">Near Duplicate 2</a> — Very similar to Near Duplicate 1 (QA #18)</li>
+            <li><span class="qa">#19</span> <a href="/exact-duplicate-a">Exact Duplicate A</a> — Same content as Duplicate B</li>
+            <li><span class="qa">#19</span> <a href="/exact-duplicate-b">Exact Duplicate B</a> — Same content as Duplicate A</li>
+            <li><span class="qa">#18</span> <a href="/near-duplicate-1.html">Near Duplicate 1</a> — Very similar to Near Duplicate 2</li>
+            <li><span class="qa">#18</span> <a href="/near-duplicate-2.html">Near Duplicate 2</a> — Very similar to Near Duplicate 1</li>
         </ul>
     </div>
 
     <div class="section">
-        <h2>Search Results Page</h2>
+        <h2>Security</h2>
         <ul>
-            <li><a href="/search-results.html">Search Results</a> — Should be noindexed but isn't</li>
+            <li><span class="qa">#75</span> Suspicious robots.txt rules — /Templates/, /App_Data/, /private-area/</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Sitemap Errors (in sitemap.xml)</h2>
+        <div class="note">These errors are in the XML files, not on separate pages</div>
+        <ul>
+            <li><span class="qa">#78</span> In sitemap but 404 — deleted-page-from-sitemap.html, old-product-page.html, etc.</li>
+            <li><span class="qa">#80</span> Redirecting URL in sitemap — /redirect-301</li>
+            <li><span class="qa">#81</span> HTTP format mismatch — http:// URLs in sitemap</li>
+            <li><span class="qa">#82</span> Non-canonical homepage — http://nimble-monstera... in sitemap</li>
+            <li><span class="qa">#83</span> Image sitemap URLs not in crawl — deleted images in image-sitemap.xml</li>
+            <li><span class="qa">#84</span> Invalid image sitemap XML — missing image:loc elements</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Cannot Test on Netlify</h2>
+        <div class="note">These require a real server and cannot be tested on static hosting</div>
+        <ul>
+            <li><span class="qa">#21</span> Spelling errors — Depends on SF crawl config</li>
+            <li><span class="qa">#66</span> HTTPS to HTTP redirect — Netlify forces HTTPS</li>
+            <li><span class="qa">#77</span> Server error 5xx — No server-side code</li>
+            <li><span class="qa">#79</span> Sitemap URL returns 5xx — No server-side code</li>
         </ul>
     </div>
 
@@ -315,16 +339,8 @@
     </div>
 
     <div class="section">
-        <h2>JavaScript Rendering Test</h2>
-        <div class="note">This page is entirely rendered by JS — empty HTML source. Not in sitemap.</div>
-        <ul>
-            <li><a href="/js-rendered.html">JS-Rendered Page</a> — Title, H1, content, and schema all injected by JavaScript at runtime</li>
-        </ul>
-    </div>
-
-    <div class="section">
         <h2>Non-Canonical Homepage Links</h2>
-        <p>These link to the homepage in non-canonical ways:</p>
+        <p><span class="qa">#34</span> These link to the homepage in non-canonical ways:</p>
         <ul>
             <li><a href="http://nimble-monstera-795cd4.netlify.app">HTTP homepage</a></li>
             <li><a href="https://nimble-monstera-795cd4.netlify.app">Without trailing slash</a></li>
