@@ -1,25 +1,12 @@
-# Intentionally broken robots.txt for testing
-
-# Missing User-agent for first rule (syntax error)
-Disallow: /secret-admin/
-
-# Correct User-agent
-User-agent: Googlebot
-Disallow: /noindex-page.html
-Disallow: /thin-content.html
-Disallow: /lorem-ipsum.html
-disallow: /broken-links.html
-
-# Suspicious rules that block content
 User-agent: *
-Disallow: /level1/
-Disallow: /images/
 Allow: /
 
-# Invalid directives (syntax errors)
-Crawl-delay: 10
-Noindex: /search-results.html
-Priority: high
+# QA #74 — Blocked by robots.txt
+Disallow: /blocked-by-robots/
 
-# Sitemap with wrong URL format
-Sitemap: http://nimble-monstera-795cd4.netlify.app/sitemap.xml
+# QA #75 — Suspicious rules that may block content
+Disallow: /Templates/
+Disallow: /App_Data/
+Disallow: /private-area/
+
+Sitemap: https://nimble-monstera-795cd4.netlify.app/sitemap.xml

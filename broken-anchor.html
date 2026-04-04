@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page With Broken Anchor Links</title>
+    <meta name="description" content="This page contains links with broken fragment identifiers.">
+    <link rel="canonical" href="https://nimble-monstera-795cd4.netlify.app/broken-anchor.html">
+</head>
+<body>
+    <h1>Broken Anchor Links</h1>
+    <p>This page has a table of contents with some broken anchor links:</p>
+    <nav>
+        <ul>
+            <li><a href="#nonexistent-section">Jump to Nonexistent Section</a></li>
+            <li><a href="#missing-id">Jump to Missing ID</a></li>
+            <li><a href="#deleted-content">Jump to Deleted Content</a></li>
+            <li><a href="#real-section">Jump to Real Section</a></li>
+        </ul>
+    </nav>
+
+    <h2 id="real-section">Real Section</h2>
+    <p>This section actually exists. The anchor link above correctly points to this heading. However, the other three anchor links in the navigation point to IDs that do not exist anywhere on this page.</p>
+
+    <p><a href="/">Back to homepage</a></p>
+</body>
+</html>

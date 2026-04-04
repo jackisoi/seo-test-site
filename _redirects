@@ -18,3 +18,22 @@
 
 # Soft 404 — returns 200 for a non-existent path (rewrite, not redirect)
 /fake-page-that-looks-like-404  /404.html  200
+
+# Image redirect (QA #72) — old image URL redirects to new one
+/images/old-logo.png  /images/test-photo.jpg  301
+
+# Redirect loop (QA #67) — A redirects to B, B redirects to A
+/loop-a  /loop-b  301
+/loop-b  /loop-a  301
+
+# Redirect to noindex page (QA #71)
+/old-event  /noindex-page.html  301
+
+# JavaScript redirect target already exists as redirect-destination.html
+
+# Redirect to HTTP — can't test on Netlify (forces HTTPS)
+# 5xx errors — can't test on Netlify (static hosting)
+
+# Exact duplicate: two URLs serve same content (QA #19)
+/exact-duplicate-a  /exact-duplicate-content.html  200
+/exact-duplicate-b  /exact-duplicate-content.html  200

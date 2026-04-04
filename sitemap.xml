@@ -203,6 +203,40 @@
         <lastmod>2026-04-02</lastmod>
     </url>
 
+    <!-- ═══ QA CHECK REVIEW PAGES ═══ -->
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/broken-external-link.html</loc>
+        <lastmod>2026-04-04</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/broken-pdf.html</loc>
+        <lastmod>2026-04-04</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/malformed-url.html</loc>
+        <lastmod>2026-04-04</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/exact-duplicate-a</loc>
+        <lastmod>2026-04-04</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/exact-duplicate-b</loc>
+        <lastmod>2026-04-04</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/tiny-image-long-alt.html</loc>
+        <lastmod>2026-04-04</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/js-redirect.html</loc>
+        <lastmod>2026-04-04</lastmod>
+    </url>
+    <url>
+        <loc>https://nimble-monstera-795cd4.netlify.app/low-readability.html</loc>
+        <lastmod>2026-04-04</lastmod>
+    </url>
+
     <!-- Intentionally missing many crawlable pages (crawled_pages_not_in_sitemap) -->
     <!-- ~50+ existing pages NOT listed here -->
 
