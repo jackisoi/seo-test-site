@@ -122,8 +122,10 @@
         <h2>Redirect Issues</h2>
         <div class="note">These use Netlify _redirects file for real HTTP status codes</div>
         <ul>
-            <li><span class="qa">#62</span> <a href="/redirect-301">301 Redirect</a> — Permanent redirect to /redirect-destination.html</li>
-            <li><span class="qa">#63</span> <a href="/redirect-302">302 Redirect</a> — Temporary redirect to /redirect-destination.html</li>
+            <li><span class="qa">#62</span> <a href="/redirect-301">301 Redirect</a> — Permanent redirect</li>
+            <li><span class="qa">#63</span> <a href="/redirect-302">302 Redirect</a> — Temporary redirect</li>
+            <li><a href="/redirect-307">307 Redirect</a> — Temporary redirect (HTTP/1.1)</li>
+            <li><a href="/redirect-308">308 Redirect</a> — Permanent redirect (HTTP/1.1)</li>
             <li><span class="qa">#64</span> <a href="/chain-step-1">Redirect Chain</a> — step-1 → step-2 → step-3 → destination</li>
             <li><span class="qa">#65</span> <a href="/redirect-to-404">Redirect to 404</a> — Redirects to a page that doesn't exist</li>
             <li><span class="qa">#69</span> <a href="/meta-refresh.html">Meta Refresh Redirect</a> — Uses meta refresh tag</li>

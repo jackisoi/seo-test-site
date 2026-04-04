@@ -1,8 +1,10 @@
 # Netlify redirect rules for SEO testing
 
-# Simple redirects
+# Simple redirects — all 4 redirect types
 /redirect-301          /redirect-destination.html    301
 /redirect-302          /redirect-destination.html    302
+/redirect-307          /redirect-destination.html    307
+/redirect-308          /redirect-destination.html    308
 
 # Redirect chain (3 hops)
 /chain-step-1          /chain-step-2                 301
