@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schema Test — All Formats (JSON-LD, Microdata, RDFa)</title>
+    <meta name="description" content="Test page with structured data in all three formats: JSON-LD, Microdata, and RDFa. Both in head and body.">
+    <link rel="canonical" href="https://nimble-monstera-795cd4.netlify.app/schema-test/all-formats.html">
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- JSON-LD in HEAD — Organization + WebSite + WebPage            -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://nimble-monstera-795cd4.netlify.app/#org",
+                "name": "SEO Test Company",
+                "url": "https://nimble-monstera-795cd4.netlify.app/",
+                "logo": "https://nimble-monstera-795cd4.netlify.app/images/logo.png",
+                "description": "A test company for validating schema extraction across all formats.",
+                "telephone": "+972-3-1234567",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Rothschild 1",
+                    "addressLocality": "Tel Aviv",
+                    "addressCountry": "IL"
+                },
+                "sameAs": [
+                    "https://www.facebook.com/seo-test",
+                    "https://www.linkedin.com/company/seo-test"
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://nimble-monstera-795cd4.netlify.app/#website",
+                "name": "SEO Test Site",
+                "url": "https://nimble-monstera-795cd4.netlify.app/",
+                "publisher": { "@id": "https://nimble-monstera-795cd4.netlify.app/#org" },
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://nimble-monstera-795cd4.netlify.app/search?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://nimble-monstera-795cd4.netlify.app/schema-test/all-formats.html#webpage",
+                "name": "Schema Test — All Formats",
+                "url": "https://nimble-monstera-795cd4.netlify.app/schema-test/all-formats.html",
+                "isPartOf": { "@id": "https://nimble-monstera-795cd4.netlify.app/#website" },
+                "about": { "@id": "https://nimble-monstera-795cd4.netlify.app/#org" },
+                "publisher": { "@id": "https://nimble-monstera-795cd4.netlify.app/#org" }
+            }
+        ]
+    }
+    </script>
+
+    <!-- JSON-LD in HEAD — Empty block (intentional — should be detected) -->
+    <script type="application/ld+json">
+    </script>
+
+    <!-- JSON-LD in HEAD — Malformed block (intentional — should show PARSE ERROR) -->
+    <script type="application/ld+json">
+    { "@type": "Thing", "name": not valid json }
+    </script>
+
+    <!-- RDFa in HEAD — Article metadata via meta tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Schema Test — All Formats">
+    <meta property="og:description" content="Test page for all schema formats">
+    <meta property="og:url" content="https://nimble-monstera-795cd4.netlify.app/schema-test/all-formats.html">
+    <meta property="article:published_time" content="2026-04-12">
+    <meta property="article:author" content="SEO Test Author">
+
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #1e1e1e; color: #d4d4d4; }
+        h1 { color: #569cd6; }
+        h2 { color: #ce9178; border-bottom: 1px solid #333; padding-bottom: 8px; }
+        h3 { color: #dcdcaa; }
+        .section { background: #252526; border: 1px solid #333; border-radius: 8px; padding: 16px; margin-bottom: 20px; }
+        .label { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; margin-bottom: 8px; }
+        .label-jsonld { background: #264f78; color: #9cdcfe; }
+        .label-microdata { background: #4b2d73; color: #c586c0; }
+        .label-rdfa { background: #6b5300; color: #dcdcaa; }
+        .label-head { background: #333; color: #999; }
+        .label-body { background: #333; color: #999; }
+        table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+        th, td { padding: 8px 12px; text-align: right; border: 1px solid #333; }
+        th { background: #2d2d30; color: #9cdcfe; }
+        .faq-q { font-weight: bold; color: #569cd6; margin-top: 12px; }
+        .faq-a { color: #d4d4d4; margin-bottom: 12px; }
+        .rating { color: #dcdcaa; font-size: 18px; }
+        footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; color: #666; font-size: 12px; }
+    </style>
+</head>
+
+<body>
+
+    <h1>Schema Test — All Formats</h1>
+    <p>This page contains structured data in <strong>JSON-LD</strong>, <strong>Microdata</strong>, and <strong>RDFa</strong> — both in &lt;head&gt; and &lt;body&gt;.</p>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- MICRODATA in BODY — BreadcrumbList                            -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <div class="section">
+        <span class="label label-microdata">Microdata</span>
+        <span class="label label-body">body</span>
+        <h2>Breadcrumbs (Microdata)</h2>
+
+        <nav itemscope itemtype="https://schema.org/BreadcrumbList">
+            <ol style="list-style:none; padding:0; display:flex; gap:8px; font-size:13px;">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="https://nimble-monstera-795cd4.netlify.app/">
+                        <span itemprop="name">Home</span>
+                    </a>
+                    <meta itemprop="position" content="1">
+                    &rsaquo;
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="https://nimble-monstera-795cd4.netlify.app/schema-test/">
+                        <span itemprop="name">Schema Tests</span>
+                    </a>
+                    <meta itemprop="position" content="2">
+                    &rsaquo;
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">All Formats</span>
+                    <meta itemprop="position" content="3">
+                </li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- MICRODATA in BODY — LocalBusiness (Hotel)                     -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <div class="section">
+        <span class="label label-microdata">Microdata</span>
+        <span class="label label-body">body</span>
+        <h2>Hotel Details (Microdata)</h2>
+
+        <div itemscope itemtype="https://schema.org/Hotel" itemid="https://nimble-monstera-795cd4.netlify.app/#hotel">
+            <h3 itemprop="name">SEO Test Hotel</h3>
+            <p itemprop="description">A beautiful test hotel on the Mediterranean coast, perfect for validating schema markup extraction.</p>
+
+            <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <span itemprop="streetAddress">HaYarkon 123</span>,
+                <span itemprop="addressLocality">Tel Aviv</span>,
+                <span itemprop="addressCountry">IL</span>
+            </div>
+
+            <p>Phone: <span itemprop="telephone">+972-3-9876543</span></p>
+            <p>Website: <a itemprop="url" href="https://nimble-monstera-795cd4.netlify.app/">nimble-monstera-795cd4.netlify.app</a></p>
+
+            <div itemprop="starRating" itemscope itemtype="https://schema.org/Rating">
+                <span class="rating">★★★★★</span>
+                <meta itemprop="ratingValue" content="5">
+                <meta itemprop="bestRating" content="5">
+            </div>
+
+            <img itemprop="image" src="https://nimble-monstera-795cd4.netlify.app/images/hotel-test.jpg" alt="SEO Test Hotel" style="max-width:200px; border-radius:8px;">
+
+            <link itemprop="sameAs" href="https://www.tripadvisor.com/seo-test-hotel">
+            <link itemprop="sameAs" href="https://www.booking.com/seo-test-hotel">
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- MICRODATA in BODY — FAQPage (5 questions with markup,         -->
+    <!--                              2 without — simulates Clal bug)  -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <div class="section">
+        <span class="label label-microdata">Microdata</span>
+        <span class="label label-body">body</span>
+        <h2>FAQ (Microdata — partial markup)</h2>
+
+        <div itemscope itemtype="https://schema.org/FAQPage">
+            <meta itemprop="name" content="Frequently Asked Questions">
+
+            <!-- Question 1 — WITH markup -->
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <p class="faq-q" itemprop="name">What is structured data?</p>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Structured data is code in a specific format that helps search engines understand your page content. It uses vocabulary from schema.org.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 — WITH markup -->
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <p class="faq-q" itemprop="name">What are the three formats for structured data?</p>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>JSON-LD (recommended by Google), Microdata (HTML attributes), and RDFa (similar to Microdata).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 — WITH markup -->
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <p class="faq-q" itemprop="name">Can you mix formats on one page?</p>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Yes, you can use JSON-LD, Microdata, and RDFa on the same page. Google can read all three.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Questions WITHOUT markup — visible content but no schema tags -->
+        <div style="margin-top: 16px; border-top: 1px solid #444; padding-top: 16px;">
+            <p style="font-size:11px; color:#888;">The following questions are visible on the page but have NO schema markup:</p>
+
+            <p class="faq-q">How do I validate my structured data?</p>
+            <p class="faq-a">Use Google's Rich Results Test or Schema.org Validator to check your markup.</p>
+
+            <p class="faq-q">Is structured data a ranking factor?</p>
+            <p class="faq-a">Not directly, but it can lead to rich results which improve CTR and visibility.</p>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- JSON-LD in BODY — Event                                       -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <div class="section">
+        <span class="label label-jsonld">JSON-LD</span>
+        <span class="label label-body">body</span>
+        <h2>Upcoming Event (JSON-LD in body)</h2>
+
+        <p><strong>SEO Workshop 2026</strong></p>
+        <p>Learn advanced schema markup techniques.</p>
+        <p>Date: May 15, 2026 | Location: Tel Aviv Convention Center</p>
+        <p>Price: 250 ILS</p>
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "@id": "https://nimble-monstera-795cd4.netlify.app/schema-test/all-formats.html#event",
+            "name": "SEO Workshop 2026",
+            "description": "Learn advanced schema markup techniques from industry experts.",
+            "startDate": "2026-05-15T09:00:00+03:00",
+            "endDate": "2026-05-15T17:00:00+03:00",
+            "location": {
+                "@type": "Place",
+                "name": "Tel Aviv Convention Center",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Rokach Blvd 101",
+                    "addressLocality": "Tel Aviv",
+                    "addressCountry": "IL"
+                }
+            },
+            "organizer": {
+                "@id": "https://nimble-monstera-795cd4.netlify.app/#org"
+            },
+            "offers": {
+                "@type": "Offer",
+                "price": "250",
+                "priceCurrency": "ILS",
+                "url": "https://nimble-monstera-795cd4.netlify.app/schema-test/all-formats.html",
+                "availability": "https://schema.org/InStock"
+            },
+            "image": "https://nimble-monstera-795cd4.netlify.app/images/event-test.jpg"
+        }
+        </script>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- JSON-LD in BODY — VideoObject (with intentional issues)       -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <div class="section">
+        <span class="label label-jsonld">JSON-LD</span>
+        <span class="label label-body">body</span>
+        <h2>Video (JSON-LD — missing required fields)</h2>
+
+        <p>A promotional video about schema markup.</p>
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "Introduction to Schema Markup",
+            "description": ""
+        }
+        </script>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- RDFa in BODY — Product with AggregateRating                   -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <div class="section">
+        <span class="label label-rdfa">RDFa</span>
+        <span class="label label-body">body</span>
+        <h2>Product Review (RDFa)</h2>
+
+        <div vocab="https://schema.org/" typeof="Product">
+            <h3 property="name">SEO Toolkit Pro</h3>
+            <p property="description">The ultimate toolkit for technical SEO audits, including schema validation, crawl analysis, and report generation.</p>
+
+            <div>
+                <span>Brand: </span>
+                <span property="brand" typeof="Brand">
+                    <span property="name">SEO Simple</span>
+                </span>
+            </div>
+
+            <div property="aggregateRating" typeof="AggregateRating">
+                <p>
+                    Rating: <span property="ratingValue">4.8</span> / <span property="bestRating">5</span>
+                    (<span property="reviewCount">127</span> reviews)
+                </p>
+            </div>
+
+            <div property="offers" typeof="Offer">
+                <p>
+                    Price: <span property="price">199</span> <span property="priceCurrency">ILS</span> / month
+                </p>
+                <link property="availability" href="https://schema.org/InStock">
+            </div>
+
+            <img property="image" src="https://nimble-monstera-795cd4.netlify.app/images/product-test.jpg" alt="SEO Toolkit Pro" style="max-width:200px; border-radius:8px;">
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- RDFa in BODY — Person                                         -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <div class="section">
+        <span class="label label-rdfa">RDFa</span>
+        <span class="label label-body">body</span>
+        <h2>Author Profile (RDFa)</h2>
+
+        <div vocab="https://schema.org/" typeof="Person">
+            <h3 property="name">Dr. Schema Expert</h3>
+            <p property="jobTitle">Senior SEO Consultant</p>
+            <p property="description">20 years of experience in search engine optimization and structured data implementation.</p>
+
+            <div property="worksFor" typeof="Organization">
+                <span property="name">SEO Simple</span>
+            </div>
+
+            <p>Email: <a property="email" href="mailto:expert@seo-simple.co.il">expert@seo-simple.co.il</a></p>
+            <p>Website: <a property="url" href="https://nimble-monstera-795cd4.netlify.app/">nimble-monstera-795cd4.netlify.app</a></p>
+
+            <a property="sameAs" href="https://www.linkedin.com/in/schema-expert">LinkedIn</a> |
+            <a property="sameAs" href="https://twitter.com/schema_expert">Twitter</a>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- RDFa in BODY — Review (standalone)                            -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <div class="section">
+        <span class="label label-rdfa">RDFa</span>
+        <span class="label label-body">body</span>
+        <h2>Review (RDFa — with empty reviewBody)</h2>
+
+        <div vocab="https://schema.org/" typeof="Review">
+            <div property="itemReviewed" typeof="Hotel">
+                <span property="name">SEO Test Hotel</span>
+            </div>
+            <span property="reviewBody"></span>
+            <div property="reviewRating" typeof="Rating">
+                <meta property="ratingValue" content="4.5">
+                <meta property="bestRating" content="5">
+                <p>★★★★½ (4.5 / 5)</p>
+            </div>
+            <span property="author" typeof="Person">
+                <span property="name">Test Reviewer</span>
+            </span>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- MICRODATA in BODY — Article                                   -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <div class="section">
+        <span class="label label-microdata">Microdata</span>
+        <span class="label label-body">body</span>
+        <h2>Article (Microdata)</h2>
+
+        <article itemscope itemtype="https://schema.org/Article">
+            <h3 itemprop="headline">Understanding Schema.org: A Complete Guide</h3>
+            <p>By <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Dr. Schema Expert</span></span></p>
+            <time itemprop="datePublished" datetime="2026-04-12">April 12, 2026</time>
+            <time itemprop="dateModified" datetime="2026-04-12">April 12, 2026</time>
+
+            <div itemprop="articleBody">
+                <p>Schema.org is a collaborative project by Google, Microsoft, Yahoo, and Yandex to create a shared vocabulary for structured data on the web. This guide covers all three markup formats and their proper implementation.</p>
+            </div>
+
+            <img itemprop="image" src="https://nimble-monstera-795cd4.netlify.app/images/article-test.jpg" alt="Schema.org Guide" style="max-width:200px; border-radius:8px;">
+
+            <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                <span itemprop="name">SEO Test Company</span>
+                <img itemprop="logo" src="https://nimble-monstera-795cd4.netlify.app/images/logo.png" alt="Logo" style="display:none;">
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>This page is part of the <a href="https://nimble-monstera-795cd4.netlify.app/">SEO Test Site</a> — used for validating schema extraction tools.</p>
+        <p>Contains: 3 JSON-LD blocks in head (including 1 empty + 1 malformed), 2 JSON-LD blocks in body, 4 Microdata schemas, 3 RDFa schemas.</p>
+    </footer>
+
+</body>
+</html>
